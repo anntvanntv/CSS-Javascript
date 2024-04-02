@@ -1,0 +1,297 @@
+:root {
+    --desaturated_red: hsl(0, 36%, 70%);
+    --soft_red: hsl(0, 93%, 68%);
+    --Dark_grayish_red: hsl(0, 6%, 24%);
+    --gradientfromA: hsl(0, 0%, 100%);
+    --gradienttoA: hsl(0, 100%, 98%);
+    --gradient_from_B: hsl(0, 80%, 86%);
+    --gradient_to_B: hsl(0, 74%, 74%);
+
+}
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+    
+}
+
+body, html {    
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    width:100vw; 
+    background-color: black;
+    
+
+
+}
+
+
+
+
+.container1 {
+    
+    width:100%;  
+    margin: auto; 
+    font-family: "Josefin Sans", sans-serif;
+    display:grid;
+    grid-template-columns: 100%;
+    
+    grid-template-rows: 91px auto 326px 155px;
+    /*align-content: end;    */
+    background: linear-gradient(hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+    text-align: center;
+    padding-bottom: 47px;
+    
+
+    grid-template-areas:
+         "header"
+         "cover"
+         "text"
+         "form";
+}
+
+header {
+    grid-area: header;
+    display:grid;
+    align-content: center;
+    justify-content: start;
+    padding-left: 2rem;
+
+    
+    
+}
+
+.logo {
+    width:8em;
+    grid-area: header;
+}
+
+.cover img {  
+    grid-area: cover;
+    width:100%;
+    
+}
+
+h1 {
+    /*line-height: 60px;*/
+    /*margin-bottom:20px;*/
+    width:85%;
+    margin: 20px auto;
+    font-weight:400;
+    text-transform: uppercase;
+    font-size: 3em;
+    /*letter-spacing: 0.8rem;*/
+    color:black;
+    
+}
+
+h1 span {
+    font-weight: 300;
+    color:var(--desaturated_red);
+} 
+
+.text {
+    grid-area:text;    
+   /* text-align: center; */
+    display: grid;
+   /* align-content: center; aquest fa pujar la secció una miqueta molt miqueta */
+    
+    
+    
+}
+
+
+
+p {
+    font-size: 1rem;
+    color: var(--desaturated_red);
+    padding:0 1.3rem;
+    line-height: 1.5rem;
+    
+}
+
+form {
+    grid-area:form;
+    width:100%;
+    display:flex;
+    opacity:0.4;
+    
+}
+
+.form {
+    margin:auto;
+    grid-area: form;
+    
+    
+} 
+
+input {
+    border-radius:27px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-width: 0.5px;
+    border-color:var(--desaturated_red);
+    padding-right: 57px;
+    padding-left: 10px;
+    margin-left: 29px;
+    
+}
+
+#errorMsg{
+  
+  font-size: 12px;
+  margin-left: -268px;
+  margin-top: -26px;
+  visibility: hidden;
+}
+
+    
+
+
+#icon{
+  
+    
+    width: 26px;
+    height: 21px;
+    margin-left: -20px;
+    margin-top: 8px;
+    visibility:hidden;
+}
+
+
+#arrow {
+    background-color:var(--soft_red);
+    border-radius:19px;
+    margin-left:-21px;
+    width:43px;
+    height:37px;
+    padding: 9px 15px;
+
+
+    color: white;
+}
+
+   #arrow:hover{
+    background-color:hsl(0, 74%, 74%);
+    width:63px;
+    padding: 11px 23px;
+}
+
+
+footer{
+    margin-top: -27px;
+}
+
+
+@media screen and (min-width:900px){
+
+    body {
+        height:100vh;
+    }
+
+
+    .container1 {
+        /*align-content: flex-start;*/
+       /* padding-left: 8rem;*/
+        margin: 5% auto;
+        width:75%;
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "header cover"
+            "text  cover"
+            "form  cover";
+        text-align: left;
+        margin-bottom: 4%;
+        padding-bottom: 0px;
+        
+    }
+
+
+     .cover {
+        grid-row-start: -3;
+        grid-row-end: -1;
+        margin-top: -76px;
+        margin-bottom: -6px;
+     }
+
+    .logo{
+        margin-top: 49px;
+        margin-left: 93px;
+
+    }
+
+    h1{
+        width: 32%;
+        font-size: 4rem;
+        border-left-width: 0px;
+        border-left-style: solid;
+        margin-left: 126px;
+        margin-top: 100px;
+    }
+
+    p{
+        padding-left: 8.3rem;
+        padding-right: 18.3rem;    
+        line-height: 34px;
+        margin-top: -44px;
+    }
+
+    .form{
+        margin-left: 126px;
+        margin-top: -20px;
+    }
+
+    input{
+        padding-right: 145px;
+        padding-left: 27px;
+        margin-left:0px;
+        margin-bottom: 35px;
+    }
+
+
+    #errorMsg{
+        
+        color:var(--soft_red);
+        margin-left: -480px;
+        margin-top: 38px;
+    }
+
+  
+
+
+    footer {
+        margin-top: -64px;
+    }
+    
+
+
+    .text {
+        grid-area:text;
+        
+    
+    }
+    
+    #icon {
+        
+        margin-left: -199px;
+        margin-top: 7px;
+        margin-bottom: 41px;
+
+         
+    
+    }
+}
+
+
+
+
+
+
+
